@@ -7989,6 +7989,9 @@ var rquery = ( /\?/ );
 // Support: Android 2.3
 // Workaround failure to string-cast null input
 jQuery.parseJSON = function( data ) {
+	if (!data){
+		data = "{}";
+	}
 	return JSON.parse( data + "" );
 };
 
