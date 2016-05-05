@@ -8,9 +8,17 @@
 function test(){
 	$.restPost({
 		  url: 'rest/flow/add',
-		  data: {'flowName':'abcd'},
+		  data: {flowName:'abcd123'},
 		  success: function(data){
-			  alert("ok");
+			  alert(data);
+		  }
+		});
+}
+function query(){
+	$.restGet({
+		  url: 'rest/flow/all',
+		  success: function(data){
+			  console.log(data);
 		  }
 		});
 }
@@ -19,5 +27,6 @@ function test(){
 <h2>Hello World!</h2>
 
 <button onClick="test()">abc</button>
+<button onClick="query()">query</button>
 </body>
 </html>

@@ -1,3 +1,9 @@
+jQuery.parseJSON = function( data ) {
+	if (!data){
+		data = "{}";
+	}
+	return JSON.parse( data + "" );
+};
 jQuery.extend({
 	//执行rest的get方法,不接受url之外的参数
 	restGet: function (options) {
